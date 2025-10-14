@@ -1,5 +1,5 @@
 import Link from "next/link"
-import {BookOpen, Clock, Github, Linkedin, Mail, MessageCircle, Shield, Sparkles, Twitter, Youtube} from "lucide-react"
+import {Clock, MessageCircle, Sparkles} from "lucide-react"
 import {clsx} from "clsx";
 
 export function Footer({className}: { className: string }) {
@@ -10,13 +10,6 @@ export function Footer({className}: { className: string }) {
     {name: "Cubyz Discord", href: "https://discord.gg/XtqCRRG", icon: <MessageCircle className="h-4 w-4"/>},
   ]
 
-
-  const socialLinks = [
-    {name: "Twitter", href: "#", icon: <Twitter className="h-5 w-5"/>, color: "hover:text-green-400"},
-    {name: "LinkedIn", href: "#", icon: <Linkedin className="h-5 w-5"/>, color: "hover:text-green-600"},
-    {name: "GitHub", href: "#", icon: <Github className="h-5 w-5"/>, color: "hover:text-gray-600"},
-    {name: "YouTube", href: "#", icon: <Youtube className="h-5 w-5"/>, color: "hover:text-red-500"}
-  ]
 
   return (
     <footer className={

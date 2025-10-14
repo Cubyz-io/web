@@ -12,7 +12,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
-import {capitalize, cn, getCapitals} from "@/lib/utils"
+import {cn, getCapitals} from "@/lib/utils"
 import {ArrowRight, Cuboid, Map, Menu, Paintbrush, Sparkles} from "lucide-react"
 import {useSupabase} from "@/app/supabase-provider";
 import {
@@ -145,7 +145,8 @@ export function Navbar() {
                 <Button variant="ghost" size="icon" className="rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">
                   <Avatar className="h-9 w-9 ring-2 ring-gray-200 dark:ring-gray-700">
                     <AvatarImage alt="Avatar"/>
-                    <AvatarFallback className="bg-gradient-to-br from-emerald-500 to-green-600 text-white font-semibold">
+                    <AvatarFallback
+                      className="bg-gradient-to-br from-emerald-500 to-green-600 text-white font-semibold">
                       {capitals}
                     </AvatarFallback>
                   </Avatar>

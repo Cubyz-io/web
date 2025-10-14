@@ -1,40 +1,17 @@
 "use client"
 
-import React, {useState} from "react"
+import React from "react"
 
 import {Button} from "@/components/ui/button"
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
 import {Navbar} from "@/components/navbar"
 import {Footer} from "@/components/footer"
 import {Badge} from "@/components/ui/badge"
-import {
-  ArrowRight,
-  BarChart,
-  CheckCircle,
-  Code,
-  Download,
-  Gamepad2,
-  Globe,
-  Heart,
-  Layers,
-  MapPin,
-  Package,
-  Palette,
-  Play,
-  Search,
-  Shield,
-  ShoppingCart,
-  Star,
-  TrendingUp,
-  Upload,
-  Users,
-  Zap,
-} from "lucide-react"
+import {ArrowRight, Code, Download, Gamepad2, Layers, Palette, Search, Shield, Upload, Users, Zap,} from "lucide-react"
 import Link from "next/link"
 import Head from "next/head"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGamepad} from "@fortawesome/free-solid-svg-icons";
-import {useSupabase} from "@/app/supabase-provider";
 
 
 export default function Home() {
@@ -42,27 +19,33 @@ export default function Home() {
     <>
       <Head>
         <title>{process.env.NEXT_PUBLIC_TITLE} » Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       </Head>
       <div className="flex min-h-screen flex-col">
-        <Navbar />
+        <Navbar/>
 
         {/* Hero Section - Completely Redesigned */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-gray-900 dark:via-green-900/20 dark:to-emerald-900/20"></div>
-          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-30 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
-          
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-gray-900 dark:via-green-900/20 dark:to-emerald-900/20"></div>
+          <div
+            className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-30 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
+
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full blur-xl opacity-20 animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 right-20 w-16 h-16 bg-gradient-to-r from-rose-400 to-green-500 rounded-full blur-xl opacity-20 animate-pulse delay-500"></div>
+          <div
+            className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
+          <div
+            className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full blur-xl opacity-20 animate-pulse delay-1000"></div>
+          <div
+            className="absolute top-1/2 right-20 w-16 h-16 bg-gradient-to-r from-rose-400 to-green-500 rounded-full blur-xl opacity-20 animate-pulse delay-500"></div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="max-w-5xl mx-auto">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-green-200 dark:border-green-800 rounded-full px-6 py-2 mb-8 shadow-lg">
+              <div
+                className="inline-flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-green-200 dark:border-green-800 rounded-full px-6 py-2 mb-8 shadow-lg">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   🎮 Cubyz Modding Marketplace — Discover & Share Mods
@@ -71,17 +54,19 @@ export default function Home() {
 
               {/* Main Headline */}
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 leading-none">
-                <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-green-800 bg-clip-text text-transparent">
+                <span
+                  className="bg-gradient-to-r from-green-600 via-emerald-600 to-green-800 bg-clip-text text-transparent">
                   Discover Amazing
                 </span>
-                <br />
+                <br/>
                 <span className="text-gray-900 dark:text-white">
                   Cubyz Mods
                 </span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+              <p
+                className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
                 Explore community‑created mods, textures and maps for the Cubyz open source game.
               </p>
 
@@ -89,23 +74,23 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
 
                 <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-white to-gray-600 hover:from-white hover:to-gray-700 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                    asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-white to-gray-600 hover:from-white hover:to-gray-700 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  asChild
                 >
                   <Link href="/app" className="flex items-center gap-2">
                     Browse Mods
-                    <Search className="w-5 h-5" />
+                    <Search className="w-5 h-5"/>
                   </Link>
                 </Button>
                 <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                    asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  asChild
                 >
                   <Link href="/app" className="flex items-center gap-2">
                     Upload Mod
-                    <Upload className="w-5 h-5" />
+                    <Upload className="w-5 h-5"/>
                   </Link>
                 </Button>
                 <Button
@@ -136,27 +121,34 @@ export default function Home() {
         {/* Features Section - Redesigned */}
         {/* Hero Section - Completely Redesigned */}
 
-        <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:to-green-900/40 dark:via-green-900/30 dark:from-emerald-900/20">
+        <section
+          className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:to-green-900/40 dark:via-green-900/30 dark:from-emerald-900/20">
           {/* Animated Background */}
           <div className="container mx-auto">
             <div className="text-center mb-20">
-              <Badge className="mb-4 bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors px-4 py-2">
+              <Badge
+                className="mb-4 bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors px-4 py-2">
                 Why Choose Our Marketplace
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Built for Modders
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Discover, share, and create amazing mods for the Cubyz open source game with our community‑driven platform.
+                Discover, share, and create amazing mods for the Cubyz open source game with our community‑driven
+                platform.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card
+                className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Search className="h-8 w-8 text-white" />
+                  <div
+                    className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Search className="h-8 w-8 text-white"/>
                   </div>
                   <CardTitle className="text-xl font-bold">Easy Mod Discovery</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -170,11 +162,14 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card
+                className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Download className="h-8 w-8 text-white" />
+                  <div
+                    className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Download className="h-8 w-8 text-white"/>
                   </div>
                   <CardTitle className="text-xl font-bold">One-Click Installation</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -188,11 +183,14 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card
+                className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="h-8 w-8 text-white" />
+                  <div
+                    className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="h-8 w-8 text-white"/>
                   </div>
                   <CardTitle className="text-xl font-bold">Active Community</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -206,11 +204,14 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card
+                className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Shield className="h-8 w-8 text-white" />
+                  <div
+                    className="w-16 h-16 bg-gradient-to-br from-green-500 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Shield className="h-8 w-8 text-white"/>
                   </div>
                   <CardTitle className="text-xl font-bold">Safe & Verified</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -219,16 +220,19 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Every mod is tested and verified to ensure it's safe to use and compatible with your Cubyz version.
+                    Every mod is tested and verified to ensure it&apos;s safe to use and compatible with your Cubyz version.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card
+                className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Code className="h-8 w-8 text-white" />
+                  <div
+                    className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Code className="h-8 w-8 text-white"/>
                   </div>
                   <CardTitle className="text-xl font-bold">Creator Tools</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -237,16 +241,20 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Comprehensive tools for mod creators to upload, update, and manage their mods with detailed analytics.
+                    Comprehensive tools for mod creators to upload, update, and manage their mods with detailed
+                    analytics.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card
+                className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Gamepad2 className="h-8 w-8 text-white" />
+                  <div
+                    className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Gamepad2 className="h-8 w-8 text-white"/>
                   </div>
                   <CardTitle className="text-xl font-bold">Cross-Platform</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -264,13 +272,16 @@ export default function Home() {
         </section>
 
         {/* Use Cases Section - Modernized */}
-        <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-green-900/40 dark:via-green-900/50 dark:to-emerald-900/60">
+        <section
+          className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-green-900/40 dark:via-green-900/50 dark:to-emerald-900/60">
           <div className="container mx-auto">
             <div className="text-center mb-20">
-              <Badge className="mb-4 bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors px-4 py-2">
+              <Badge
+                className="mb-4 bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors px-4 py-2">
                 Mod Categories
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Mods for Every Playstyle
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -318,12 +329,15 @@ export default function Home() {
                 }
               ].map((useCase, index) => (
                 <div key={index} className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl blur-xl"
-                       style={{background: `linear-gradient(to right, var(--tw-gradient-stops))`}}></div>
-                  <Card className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 h-full">
+                  <div
+                    className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl blur-xl"
+                    style={{background: `linear-gradient(to right, var(--tw-gradient-stops))`}}></div>
+                  <Card
+                    className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 h-full">
                     <CardHeader className="text-center pb-4">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${useCase.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                        <useCase.icon className="h-8 w-8 text-white" />
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-r ${useCase.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                        <useCase.icon className="h-8 w-8 text-white"/>
                       </div>
                       <CardTitle className="text-xl font-bold">{useCase.title}</CardTitle>
                     </CardHeader>
@@ -339,7 +353,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-green-900/80 dark:to-green-900/90">
+        <section
+          className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-green-900/80 dark:to-green-900/90">
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-10"></div>
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
@@ -359,7 +374,7 @@ export default function Home() {
               >
                 <Link href="/app" className="flex items-center gap-2">
                   Browse Mods
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"/>
                 </Link>
               </Button>
               <Button
@@ -373,7 +388,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 text-white/80">
-              <p className="text-sm">✓ Free downloads  ✓ Easy installation  ✓ Active community</p>
+              <p className="text-sm">✓ Free downloads ✓ Easy installation ✓ Active community</p>
             </div>
           </div>
         </section>

@@ -7,7 +7,6 @@ import {Provider} from "@supabase/auth-js";
 import {LoginFormData} from '@/components/login-form';
 import {UpdatePasswordFormData} from "@/components/update-password-form";
 import {UpdateEmailFormData} from "@/components/update-email-form";
-import {PhoneNumber} from "libphonenumber-js";
 import {RegisterFormData} from "@/components/pages/register";
 
 export async function login(formData: LoginFormData) {

@@ -6,14 +6,12 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components
 import {Input} from "@/components/ui/input"
 import {Label} from "@/components/ui/label"
 import {Checkbox} from "@/components/ui/checkbox"
-import {ArrowRight, Building, Eye, EyeOff, KeyRound, Mail, User, UserPlus} from "lucide-react"
+import {ArrowRight, Eye, EyeOff, KeyRound, Mail, User, UserPlus} from "lucide-react"
 import Link from "next/link"
 import {redirect} from "next/navigation"
 import {signInOAuth, signup} from "@/pages/api/auth/actions";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord} from "@fortawesome/free-brands-svg-icons";
-import {PhoneInput} from "@/components/ui/phone-input";
-import * as RPNInput from "react-phone-number-input";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
