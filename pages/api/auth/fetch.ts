@@ -1,4 +1,4 @@
-import {SupabaseClient} from "@supabase/auth-helpers-nextjs";
+import {SupabaseClient} from "@supabase/supabase-js";
 import {User} from "@supabase/auth-js";
 
 export async function getUser(supabase: SupabaseClient): Promise<User | undefined> {

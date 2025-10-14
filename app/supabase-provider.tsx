@@ -1,8 +1,8 @@
 'use client';
 
-import {Session, SupabaseClient} from '@supabase/auth-helpers-nextjs';
 import {ContextType, createContext, useContext, useState} from 'react';
 import {createClient} from "@/utils/supabase/client";
+import {Session, SupabaseClient} from "@supabase/supabase-js";
 
 type MaybeSession = Session | null;
 
