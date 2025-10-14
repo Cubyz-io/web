@@ -1,5 +1,5 @@
 import Link from "next/link"
-import {Clock, MessageCircle, Sparkles} from "lucide-react"
+import {MessageCircle, Sparkles} from "lucide-react"
 import {clsx} from "clsx";
 
 export function Footer({className}: { className: string }) {
