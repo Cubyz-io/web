@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@layer base {
+  :root {
+    /* Neutral Colors */
+    --background: 0 0% 95%;
+    --foreground:  0 0% 0%;
+
+    /* Primary Colors */
+    --primary: 25 95% 53.1%;
+    --primary-foreground:  0 0% 0%;
+
+    /* Secondary Colors */
+    --secondary: 25 95% 53.1%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent Colors */
+    --accent: 224 20% 20%;
+    --accent-foreground: 224 64% 75%;
+
+    /* Muted Colors */
+    --muted: 224 20% 20%;
+    --muted-foreground: 224 20% 65%;
+
+    /* Destructive Colors */
+    --destructive:255 00% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Other UI Elements */
+    --border: 224 20% 25%;
+    --input: 224 20% 25%;
+    --ring: 224 64% 62%;
+
+    /* Sidebar colors */
+    --sidebar-background: 224 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-border: 224 20% 25%;
+    --sidebar-accent: 224 20% 20%;
+    --sidebar-accent-foreground: 224 64% 75%;
+    --sidebar-ring: 224 64% 62%;
+  }
+
+  .dark {
+    /* Neutral Colors */
+    --background: 215, 60%, 11%;
+    --foreground: 255 100% 100%;
+
+    /* Primary Colors */
+    --primary:255 100% 100%;
+    --primary-foreground: 154, 53%, 57%;
+
+    /* Secondary Colors */
+    --secondary: 24, 100%, 50%;
+    --secondary-foreground: 255 100% 100%;
+
+    /* Accent Colors */
+    --accent:255 00% 30%;
+    --accent-foreground: 255 100% 100%;
+
+    /* Muted Colors */
+    --muted: 154, 53%, 57%;
+    --muted-foreground: 255 100% 100%;
+
+    /* Destructive Colors */
+    --destructive:255 00% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Other UI Elements */
+    --border: 224 20% 25%;
+    --input: 224 20% 25%;
+    --ring: 224 64% 62%;
+
+    /* Sidebar colors */
+    --sidebar-background: 224 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-border: 224 20% 25%;
+    --sidebar-accent: 212 29% 30%;
+    --sidebar-accent-foreground: 224 64% 75%;
+    --sidebar-ring: 224 64% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
