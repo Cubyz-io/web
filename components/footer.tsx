@@ -33,10 +33,6 @@ export function Footer({className}: { className: string }) {
                 {process.env.NEXT_PUBLIC_TITLE}
               </span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-              <Clock className="h-4 w-4 text-green-500"/>
-              <span>24/7 Expert Support</span>
-            </div>
           </div>
 
 
