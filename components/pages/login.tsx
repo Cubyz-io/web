@@ -39,7 +39,7 @@ export default function LoginComponent({children}: { children?: React.ReactNode 
         toast.error(error.message)
       } else {
         toast.success("Welcome back!")
-        router.push("/app")
+        router.push("/mods")
         router.refresh()
       }
     } catch (error) {
