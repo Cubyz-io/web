@@ -23,6 +23,8 @@ export async function login(formData: LoginFormData) {
     throw error
   }
 
+  await createUser()
+
   revalidatePath('/', 'layout')
   return '/dashboard'
 }
@@ -62,9 +64,9 @@ export async function createUser() {
       {
         id: user.data.user?.id,
         email: user.data.user?.email,
-        client_name: user.data.user?.user_metadata.full_name ?? user.data.user?.email,
-        first_name: user.data.user?.user_metadata.full_name ?? user.data.user?.email,
-        last_name: user.data.user?.user_metadata.full_name ?? "",
+        user_name: user.data.user?.user_metadata.name ?? user.data.user?.user_metadata.full_name ?? user.data.user?.email,
+        first_name: user.data.user?.user_metadata.firstName ?? user.data.user?.user_metadata.full_name ?? user.data.user?.email,
+        last_name: user.data.user?.user_metadata.lastName ?? user.data.user?.user_metadata.full_name ?? "",
       },
       {onConflict: 'id'}
     )

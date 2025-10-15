@@ -78,7 +78,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-white to-gray-600 hover:from-white hover:to-gray-700 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                   asChild
                 >
-                  <Link href="/app" className="flex items-center gap-2">
+                  <Link href="/mods" className="flex items-center gap-2">
                     Browse Mods
                     <Search className="w-5 h-5"/>
                   </Link>
@@ -88,7 +88,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                   asChild
                 >
-                  <Link href="/app" className="flex items-center gap-2">
+                  <Link href="/mods/upload" className="flex items-center gap-2">
                     Upload Mod
                     <Upload className="w-5 h-5"/>
                   </Link>
@@ -220,7 +220,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Every mod is tested and verified to ensure it&apos;s safe to use and compatible with your Cubyz version.
+                    Every mod is tested and verified to ensure it&apos;s safe to use and compatible with your Cubyz
+                    version.
                   </p>
                 </CardContent>
               </Card>
@@ -372,7 +373,7 @@ export default function Home() {
                 className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 asChild
               >
-                <Link href="/app" className="flex items-center gap-2">
+                <Link href="/mods" className="flex items-center gap-2">
                   Browse Mods
                   <ArrowRight className="w-5 h-5"/>
                 </Link>
@@ -383,7 +384,7 @@ export default function Home() {
                 className="border-2 border-white/30 text-black  dark:text-green-100 hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
                 asChild
               >
-                <Link href="/app">Upload Your Mod</Link>
+                <Link href="/mods/upload">Upload Your Mod</Link>
               </Button>
             </div>
 
